@@ -1,4 +1,4 @@
-# Basic-X PHP Simple Web Shell
+# Basic-X PHP Web Shell
 ![Alt text](assets/image.png)
 ## Overview
 
