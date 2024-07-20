@@ -213,17 +213,6 @@
             foreach ($output as $line) {
                 // Escape HTML entities
                 $line = htmlspecialchars($line, ENT_QUOTES, 'UTF-8');
-                
-                // Color specific patterns
-                $line = preg_replace('/(\b(?:cd|ls|mkdir|rm|echo|cat|grep|chmod|chown|tail|find|wget|curl|ps|top|df|du)\b)/i', '<span class="keyword">$1</span>', $line); // Commands
-                $line = preg_replace('/(\b\w+=[\'"][^\']*[\'"]\b)/i', '<span class="variable">$1</span>', $line); // Variables
-                $line = preg_replace('/(["\'])(.*?)\1/', '<span class="string">$0</span>', $line); // Strings
-                $line = preg_replace('/(\/[^\s]+\/[^\s]*)/', '<span class="path">$1</span>', $line); // Paths
-                $line = preg_replace('/(\#.*)/', '<span class="comment">$1</span>', $line); // Comments
-                $line = preg_replace('/(\d+)/', '<span class="number">$1</span>', $line); // Numbers
-                $line = preg_replace('/(\+|\-|\*|\/|\&|\||\!|\=|\<|\>|\%)/', '<span class="operator">$1</span>', $line); // Operators
-                $line = preg_replace('/(\bfunction\b)/i', '<span class="function">$1</span>', $line); // Functions
-
                 // Highlight errors
                 if (strpos(strtolower($line), 'error') !== false) {
                     $line = "<span class='error'>$line</span>";
