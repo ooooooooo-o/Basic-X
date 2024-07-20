@@ -4,7 +4,7 @@
 
 **Basic-X** is a simple PHP web shell. It demonstrates basic web-based functionalities such as:
 
-- **Command Execution:** Run shell commands via a web interface.
+- **Command Execution:** Run shell commands.
 - **File Upload:** Upload files to the server.
 - **Server Information:** View server details including hostname, IP, and PHP version.
 
